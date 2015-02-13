@@ -1,12 +1,11 @@
-﻿{
+{
 	"repositories": [
 		{
 			"type": "vcs",
 			"url": "https://github.com/HelenTh/settlement.git"
 		}
 	],
-	 "require": {
-        "helen/sett": "dev-master"
+	"require": {
+        "HelenTh/sett": "dev-master"
     }
-
 }
