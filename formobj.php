@@ -41,20 +41,8 @@ for ($y=0; $y<=2; ++$y) {
 			}
 	}
 }
-$sett->show();
-echo "<p>Коммунальные услуги " . $sett->ras_kp() . "</p>";
-echo "<p>Количество населения " . $sett->ras_nass() . "</p>";
-echo "<p><b>Бюджет</b></p>";
-$sett->ras_budg();
-$sett->show_streets(); //выводим таблицу улиц
-foreach ($sett->streets as $str) { //выводим для каждой улицы таблицу домов
-	echo "<h3>Улица $str->name</h3>";
-	$str->show_doma();
-	foreach ($str->doma as $dm) { //выводим для каждого дома таблицу квартир
-		$dm->show_kvart(); 
-		}
-	}
-
+ $seriasett = serialize($sett);
+ echo json_encode($seriasett);
 
 /*
 	
